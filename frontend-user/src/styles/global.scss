@@ -1,0 +1,77 @@
+// 全局变量
+$primary-color: #409eff;
+$success-color: #67c23a;
+$warning-color: #e6a23c;
+$danger-color: #f56c6c;
+$info-color: #909399;
+
+$text-primary: #303133;
+$text-regular: #606266;
+$text-secondary: #909399;
+$text-placeholder: #c0c4cc;
+
+$bg-color: #f5f7fa;
+$bg-white: #ffffff;
+$border-color: #dcdfe6;
+$border-light: #e4e7ed;
+
+$border-radius: 8px;
+$border-radius-small: 4px;
+$border-radius-large: 12px;
+
+$shadow-light: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+$shadow-medium: 0 4px 16px 0 rgba(0, 0, 0, 0.12);
+
+// 间距
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 24px;
+$spacing-xl: 32px;
+
+// 重置样式
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  font-size: 14px;
+  color: $text-primary;
+  background-color: $bg-color;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+// 通用卡片样式
+.card {
+  background: $bg-white;
+  border-radius: $border-radius;
+  box-shadow: $shadow-light;
+  padding: $spacing-lg;
+}
+
+// 页面标题
+.page-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: $text-primary;
+  margin-bottom: $spacing-lg;
+}
+
+// 价格样式
+.price {
+  color: $danger-color;
+  font-weight: 600;
+}
