@@ -119,9 +119,7 @@ async function handleAddToCart() {
   addLoading.value = true
   await new Promise(resolve => setTimeout(resolve, 300))
   
-  for (let i = 0; i < quantity.value; i++) {
-    cartStore.addToCart(book.value)
-  }
+  cartStore.addToCart(book.value, quantity.value)
   
   ElMessage.success(`已添加 ${quantity.value} 本到购物车`)
   addLoading.value = false
@@ -137,9 +135,7 @@ async function handleBuyNow() {
   buyLoading.value = true
   await new Promise(resolve => setTimeout(resolve, 300))
   
-  for (let i = 0; i < quantity.value; i++) {
-    cartStore.addToCart(book.value)
-  }
+  cartStore.addToCart(book.value, quantity.value)
   
   buyLoading.value = false
   router.push('/cart')

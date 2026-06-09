@@ -22,13 +22,13 @@ export const useCartStore = defineStore('cart', () => {
     localStorage.setItem('cartItems', JSON.stringify(items.value))
   }
 
-  function addToCart(book) {
+  function addToCart(book, qty = 1) {
     logger.info('添加商品到购物车', { bookId: book.id, title: book.title })
     
     const existingItem = items.value.find(item => item.id === book.id)
     
     if (existingItem) {
-      existingItem.quantity += 2
+      existingItem.quantity += qty
       logger.debug('商品数量增加', { bookId: book.id, quantity: existingItem.quantity })
     } else {
       items.value.push({
@@ -37,7 +37,7 @@ export const useCartStore = defineStore('cart', () => {
         author: book.author,
         price: book.price,
         cover: book.cover,
-        quantity: 1
+        quantity: qty
       })
       logger.debug('新商品添加到购物车', { bookId: book.id })
     }
